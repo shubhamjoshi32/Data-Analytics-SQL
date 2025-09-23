@@ -12,8 +12,9 @@ from job_postings_fact jpf
 LEFT JOIN company_dim cd on jpf.company_id = cd.company_id
 
 where 
-    jpf.job_title = 'Data Analyst' AND 
+    jpf.job_title_short = 'Data Analyst' AND 
     job_location = 'Anywhere' AND  
     salary_year_avg IS NOT NULL
-order by salary_year_avg desc
+order by 
+    salary_year_avg desc
 limit 10
