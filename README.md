@@ -54,9 +54,50 @@ Here's the breakdown of the top data analyst jobs in 2023:
 - **Diverse Employers:** Companies like SmartAsset, Meta, and AT&T are among those offering high salaries, showing a broad interest across different industries.
 - **Job Title Variety:** There's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specializations within data analytics.
 
-![Top Paying Roles](assets/1_top_paying_roles.png)
-*Bar graph visualizing the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results*
+![Top Paying Roles](Assets\Job_title_vs_avg_yearly_salary.png)
+*Bar graph visualizing the salary for the top 10 salaries for data analysts are generated with PowerBi as a result my SQL query results*
 
+### 2. Skills for Top Paying Jobs
+To understand what skills are required for the top-paying jobs, I joined the job postings with the skills data, providing insights into what employers value for high-compensation roles.
+```sql
+WITH top_paying_jobs AS (
+    SELECT	
+        job_id,
+        job_title,
+        salary_year_avg,
+        name AS company_name
+    FROM
+        job_postings_fact
+    LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
+    WHERE
+        job_title_short = 'Data Analyst' AND 
+        job_location = 'Anywhere' AND 
+        salary_year_avg IS NOT NULL
+    ORDER BY
+        salary_year_avg DESC
+    LIMIT 10
+)
+
+SELECT 
+    top_paying_jobs.*,
+    skills
+FROM top_paying_jobs
+INNER JOIN skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
+INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+ORDER BY
+    salary_year_avg DESC;
+```
+
+Here's the breakdown of the most demanded skills for the top 10 highest paying data analyst jobs in 2023:
+
+- **SQL** is leading at no. 1 .
+- **Python** follows closely at no second.
+- **Tableau** is also highly demanded ar third no. 
+- Other skills like R, Snowflake, Pandas, and Excel show varying degrees of demand.
+
+
+![Top Paying Skills for data Analyst](Assets\Sum_of_salary_year_avg_by_skills.png)
+*Bar graph visualizing the salary for the top 10 skill for data analysts are generated with PowerBi as a result my SQL query results*
 
 # What I Learned
 # Conclusions
