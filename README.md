@@ -3,7 +3,7 @@ README.md contents:
 # Introduction
 Hello, This SQL Project dives into the data job market! Focusing on data analyst roles. This project explores top-paying jobs, in-demand skills, and where high demand meets high salary in data analytics.
 
-🔍For SQL queries? Check them out here: [project_sql folder](/project_sql/)
+For SQL queries? Check them out here: [project_sql folder](/project_sql/)
 
 # Background
 
@@ -18,7 +18,9 @@ For my deep dive into the data analyst job market, I have used various tools for
 - **SQL:** The backbone for the sql analysis, this allowed me to query the database and extract critical insights from the database.
 - **PostgreSQL:** This was the chosen database management system, ideal for handling the job posting data.
 - **Visual Studio Code:** I could have directly used the inhouse editor of PG4 Admin, but to learn with different approach and explore. I used Visual Studio Code to connect database and execute SQL queries.
+- **AI Tools (Chat GPT):** To get help where I was stuck, and clearly understand the query
 - **Git & GitHub:** Essential for version control and sharing my SQL scripts and analysis, ensuring collaboration and project tracking.
+
 
 # The Analysis
 
@@ -55,7 +57,7 @@ Here's the breakdown of the top data analyst jobs in 2023:
 - **Job Title Variety:** There's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specializations within data analytics.
 
 ![Top Paying Roles](Assets/Job_title_vs_avg_yearly_salary.png)
-*Bar graph visualizing the salary for the top 10 salaries for data analysts are generated with PowerBi as a result my SQL query results*
+*Bar graph visualizing the salary for the top 10 salaries for data analysts are generated with PowerBi as a result my SQL query results which exported into the .csv format*
 
 ### 2. Skills for Top Paying Jobs
 To understand what skills are required for the top-paying jobs, I joined the job postings with the skills data, providing insights into what employers value for high-compensation roles.
@@ -97,7 +99,7 @@ Here's the breakdown of the most demanded skills for the top 10 highest paying d
 
 
 ![Top Paying Skills for data Analyst](Assets/Sum_of_salary_year_avg_by_skills.png)
-*Bar graph visualizing the salary for the top 10 skill for data analysts are generated with PowerBi as a result my SQL query results*
+*Bar graph visualizing the salary for the top 10 skill for data analysts are generated with PowerBi as a result my SQL query results which exported into the .csv format*
 
 ### 3. In-Demand Skills for Data Analysts
 
