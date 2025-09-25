@@ -21,10 +21,18 @@ For my deep dive into the data analyst job market, I have used various tools for
 - **AI Tools (Chat GPT):** To get help where I was stuck, and clearly understand the query
 - **Git & GitHub:** Essential for version control and sharing my SQL scripts and analysis, ensuring collaboration and project tracking.
 
+# Here is the data Model ( Entity Relationship Diagram )
+
+This data model consist of four table and are linked to each other with foreign key. please check the following diagram for more information
+
+![Top Paying Roles](Assets\Entity_relationship_model.png)
+
 
 # The Analysis
 
 Each query for this project aimed at investigating specific aspects of the data analyst job market. Here’s how I approached each question:
+
+
 
 ### 1. Top Paying Data Analyst Jobs
 To identify the highest-paying roles, I filtered data analyst positions by average yearly salary and location, focusing on remote jobs. This query highlights the high paying opportunities in the field.
