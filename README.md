@@ -25,7 +25,7 @@ For my deep dive into the data analyst job market, I have used various tools for
 
 This data model consist of four table and are linked to each other with foreign key. please check the following diagram for more information
 
-![Top Paying Roles](Assets\Entity_relationship_model.png)
+![ER Diagram](Assets/Entity_relationship_model.png)
 
 
 # The Analysis
